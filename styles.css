@@ -132,3 +132,7 @@ body {
 .registrar-link a:hover {
     text-decoration: underline;
 }
+
+.senha {
+    cursor: pointer;
+}

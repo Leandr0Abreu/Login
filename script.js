@@ -9,15 +9,18 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
-const container = document.querySelector(".container");
+    const inputSenha = document.querySelector(".inputSenha");
+    const senha = document.querySelector(".senha");
 
-document.addEventListener("mousemove", (e) => {
+    senha.addEventListener("click", (e) => {
+        if (inputSenha.type === "password") {
+            inputSenha.type = "text"
+            senha.classList.replace("fa-eye", "fa-eye-slash")
+        }   else { 
+                inputSenha.type = "password"
+                senha.classList.replace("fa-eye-slash", "fa-eye")
+        }
+    });
 
-    const x = (window.innerWidth / 2 - e.clientX) / 25;
 
-    const y = (window.innerHeight / 2 - e.clientY) / 25;
 
-    container.style.transform =
-        `rotateY(${-x}deg) rotateX(${y}deg)`;
-
-});
